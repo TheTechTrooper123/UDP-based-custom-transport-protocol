@@ -1,3 +1,5 @@
+Eine visuelle Simulation eines benutzerdefinierten, auf UDP basierenden zuverlässigen Transportprotokolls. Sie demonstriert einen TCP-ähnlichen Three-Way-Handshake, Sitzungsverwaltung und Zustandsübergänge über einen unzuverlässigen Kanal, erweitert durch Gemini-KI zur Protokollanalyse.
+
 In diesem Projekt wird ein UDP-based Custom Transport Protocol entwickelt – ein verbindungsorientiertes und zustandsbasiertes Transportprotokoll, das auf UDP aufsetzt und die Vorteile eines eigenen, kontrollierten Verbindungsmanagements nutzt. Während UDP ausschließlich für den reinen Pakettransport verwendet wird, implementiert das Protokoll selbst alle höheren Kommunikationsmechanismen.
 
 Zentraler Bestandteil ist ein eigener Handshake, der einen expliziten Verbindungsaufbau ermöglicht, vergleichbar mit dem TCP Three-Way Handshake. Dieser Handshake dient der gegenseitigen Erkennung von Client und Server, der Initialisierung einer eindeutigen Session sowie dem Schutz vor zufälligen, ungültigen oder gefälschten Paketen. Erst nach erfolgreichem Abschluss des Handshakes wird eine logische Verbindung aufgebaut und die Übertragung von Nutzdaten zugelassen.
