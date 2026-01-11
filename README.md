@@ -1,20 +1,5 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+In diesem Projekt wird ein UDP-based Custom Transport Protocol entwickelt – ein verbindungsorientiertes und zustandsbasiertes Transportprotokoll, das auf UDP aufsetzt und die Vorteile eines eigenen, kontrollierten Verbindungsmanagements nutzt. Während UDP ausschließlich für den reinen Pakettransport verwendet wird, implementiert das Protokoll selbst alle höheren Kommunikationsmechanismen.
 
-# Run and deploy your AI Studio app
+Zentraler Bestandteil ist ein eigener Handshake, der einen expliziten Verbindungsaufbau ermöglicht, vergleichbar mit dem TCP Three-Way Handshake. Dieser Handshake dient der gegenseitigen Erkennung von Client und Server, der Initialisierung einer eindeutigen Session sowie dem Schutz vor zufälligen, ungültigen oder gefälschten Paketen. Erst nach erfolgreichem Abschluss des Handshakes wird eine logische Verbindung aufgebaut und die Übertragung von Nutzdaten zugelassen.
 
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/drive/1LjUU2hY_GrQyLbw2UWtQeHvVY4m7dlGy
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Das Protokoll arbeitet zustandsbasiert und verwaltet jede Verbindung über klar definierte Zustände. Eingehende Pakete werden ausschließlich akzeptiert, wenn sie zu einer bekannten Session gehören und dem aktuellen Verbindungszustand entsprechen. Dadurch entsteht eine kontrollierte und strukturierte Kommunikation über ein ansonsten verbindungsloses Transportmedium.
