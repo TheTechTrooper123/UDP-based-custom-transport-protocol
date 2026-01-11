@@ -1,0 +1,5 @@
+{
+  "name": "SCTP Simulator (Secure Custom Transport Protocol)",
+  "description": "A visual simulation of a custom UDP-based reliable transport protocol. It demonstrates a TCP-like 3-way handshake, session management, and state transitions over an unreliable channel, augmented with Gemini AI for protocol analysis.",
+  "requestFramePermissions": []
+}
